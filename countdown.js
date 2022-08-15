@@ -1,5 +1,5 @@
 // Date and time 60 minutes from now
-var countDownDate = new Date().getTime() + 1000 * 60 * 60.02;
+var countDownDate = new Date().getTime() + 1000 * 60 * 2.02;
 
 var x = setInterval(function () {
   // Date and time right now
@@ -13,7 +13,12 @@ var x = setInterval(function () {
 
   // Output the result in an element with id
   document.getElementById("counter").innerHTML =
-    hours + "h " + minutes + "m " + seconds + "s ";
+    hours +
+    "h " +
+    ("0" + minutes).slice(-2) +
+    "m " +
+    ("0" + seconds).slice(-2) +
+    "s ";
 
   // This happens if count down is over
   if (distance < 0) {

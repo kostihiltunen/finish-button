@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+}
 p {
+  font-family: "Courier New", Courier, monospace;
   font-size: 100px;
+  color: crimson;
 }

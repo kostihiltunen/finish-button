@@ -1,5 +1,7 @@
-// Date and time 60 minutes from now
-var countDownDate = new Date().getTime() + 1000 * 60 * 2.02;
+// global variable for time to countdown
+const countdownTime = 1000 * 60 * 0.1;
+// global variable for this moment added with time to countdown
+var countDownDate = new Date().getTime() + countdownTime;
 
 var x = setInterval(function () {
   // Date and time right now

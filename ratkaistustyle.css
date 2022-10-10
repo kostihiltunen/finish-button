@@ -1,0 +1,12 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+}
+
+#ratkaistutext{
+    font-size: 7em;
+    color: white;
+}

@@ -1,7 +1,6 @@
-// var Gpio = require('onoff').Gpio
+var Gpio = require("onoff").Gpio;
 
-// var pushButtonA = new Gpio(17, 'in', 'both');
-// var pushButtonB = new Gpio(27, 'in', 'both');
+var pushButtonB = new Gpio(27, "in", "both");
 
 var endTime = new Date().getTime() + 1000 * 60 * 0.1;
 
@@ -26,12 +25,17 @@ if (t >= 0) {
     document.getElementById("timer-secs").innerHTML =
     ("0" + secs).slice(-2) + "<span class='label'>SEC(S)</span>";
 } else {
-    // document.getElementById("timer-hours").style.display = "none";
-    // document.getElementById("timer-mins").style.display = "none";
-    // document.getElementById("timer-secs").style.display = "none";
-    // document.getElementById("timer").innerHTML = "aeka loppusisi";
     self.location="gameover.html";
 }
 }, 1000);
 
-//var gameOver =
+
+pushButtonB.watch(function (err, value) {
+  if (err) {
+    console.log("There was an error", err);
+    return;
+  }
+  if (value === 1) {
+    self.location = "nappikello1.html";
+  }
+});

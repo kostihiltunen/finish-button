@@ -1,6 +1,6 @@
-var Gpio = require("onoff").Gpio;
+// var Gpio = require("onoff").Gpio;
 
-var pushButtonB = new Gpio(27, "in", "both");
+// var pushButtonB = new Gpio(27, "in", "both");
 
 var endTime = new Date().getTime() + 1000 * 60 * 0.1;
 

@@ -8,6 +8,7 @@ pushButtonA.watch(function (err, value) {
     return;
   }
   if (value === 1) {
+    console.log("button pressed");
     self.location = "nappikello1.html";
   }
 });
